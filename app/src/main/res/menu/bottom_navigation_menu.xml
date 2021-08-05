@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/notice_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_notice"
+        android:title="notice"/>
+    <item
+        android:id="@+id/event_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_event"
+        android:title="events"/>
+    <item
+        android:id="@+id/book_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_books"
+        android:title="books"/>
+    <item
+        android:id="@+id/developer_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_creators"
+        android:title="developers"/>
+
+</menu>

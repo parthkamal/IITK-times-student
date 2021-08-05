@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_others_fragment"
+        android:title="Others" />
+    <item
+        android:id="@+id/nav_festivals_fragment"
+        android:title="Festivals" />
+    <item
+        android:id="@+id/nav_antaragni_fragment"
+        android:title="Antaragni" />
+    <item
+        android:id="@+id/nav_techkriti_fragment"
+        android:title="Techkriti" />
+    <item
+        android:id="@+id/nav_udghosh_fragment"
+        android:title="Udghosh" />
+    <item
+        android:id="@+id/nav_special_fragment"
+        android:title="Special" />
+</menu>
