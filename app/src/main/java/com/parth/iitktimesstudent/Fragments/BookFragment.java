@@ -46,7 +46,7 @@ public class BookFragment extends Fragment {
         FirebaseRecyclerOptions<book> options = new FirebaseRecyclerOptions.Builder<book>()
                 .setQuery(databaseReference,book.class)
                 .build();
-        bookAdapter = new BookAdapter(options);
+        bookAdapter = new BookAdapter(options,getActivity());
         recyclerView.setAdapter(bookAdapter);
          return view;
     }
