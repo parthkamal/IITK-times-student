@@ -47,21 +47,17 @@ public class BookAdapter extends FirebaseRecyclerAdapter<book,BookAdapter.ViewHo
             public void onClick(View view) {
                 Toast.makeText(view.getContext(),model.getTitle(),Toast.LENGTH_SHORT).show();
                 CharSequence options[] = new CharSequence[]{
-                        "Download",
                         "View",
                         "Cancel"
                 };
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                builder.setTitle("Choose One");
+                builder.setTitle("Choose Your Options");
                 builder.setItems(options, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // we will be downloading the pdf
-                        if (which == 0) {
-                           Toast.makeText(view.getContext(),"downloading the pdf",Toast.LENGTH_SHORT).show();
-                        }
                         // We will view the pdf
-                        if (which == 1) {
+                        if (which == 0) {
                             Toast.makeText(view.getContext(),"Open file",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(context, viewPdf.class);
                             Log.e("URl",model.getDownloadUrl());
