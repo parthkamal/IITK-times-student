@@ -18,16 +18,33 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
-        firebaseAuth = FirebaseAuth.getInstance();
-        SystemClock.sleep(3000);
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-        if(firebaseUser== null){
-            Intent loginInTENT = new Intent(SplashActivity.this,RegisterActivity.class);
-            startActivity(loginInTENT);
-        }else{
-            Intent mainIntent = new Intent(SplashActivity.this,MainActivity.class);
-            startActivity(mainIntent);
-        }
+        Thread thread  = new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try{
+                    sleep(2000);
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                finally {
+                    firebaseAuth = FirebaseAuth.getInstance();
+                    SystemClock.sleep(3000);
+                    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                    if(firebaseUser== null){
+                        Intent loginInTENT = new Intent(SplashActivity.this,RegisterActivity.class);
+                        startActivity(loginInTENT);
+                    }else{
+                        Intent mainIntent = new Intent(SplashActivity.this,MainActivity.class);
+                        startActivity(mainIntent);
+                    }
+                }
+            }
+        };
+        thread.start();
+
+
     }
 
     @Override

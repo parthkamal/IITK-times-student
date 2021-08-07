@@ -89,10 +89,10 @@ public class SignInFragment extends Fragment {
                         @Override
                         public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                progressBar.setVisibility(View.INVISIBLE);
                                 Toast.makeText(getActivity(),"logged-in Successfully",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getActivity(), MainActivity.class);
                                 startActivity(intent);
-                                btn_login.setEnabled(true);
                                 getActivity().finish();
                             }else{
                                 btn_login.setEnabled(true);

@@ -85,10 +85,10 @@ public class SignUpFragment extends Fragment {
                         @Override
                         public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                progressBar.setVisibility(View.INVISIBLE);
                                 Toast.makeText(getActivity(),"Registered Successfully",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getActivity(), MainActivity.class);
                                 startActivity(intent);
-                                btn_register.setEnabled(true);
                                 getActivity().finish();
                             }else{
                                 progressBar.setVisibility(View.INVISIBLE);
